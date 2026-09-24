@@ -1,0 +1,423 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KHÔI TECH STORE</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f6f8;
+      margin: 0;
+      padding: 0;
+    }
+
+    .khung {
+      max-width: 1280px;
+      margin: 0 auto;
+      background-color: #041b5a;
+      padding: 20px;
+      border-radius: 20px;
+    }
+
+    .khung h2 {
+      color: #ffffff;
+    }
+
+    .bang-san-pham {
+      width: 100%;
+      border-spacing: 20px;
+      margin-top: 10px;
+
+    }
+
+    .bang-san-pham td {
+      text-align: center;
+      padding: 15px;
+      border: 1px solid #eee;
+      border-radius: 12px;
+      background: #ffffff;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2)
+    }
+
+    .bang-san-pham td:hover {
+      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+
+    }
+
+    .bang-san-pham img {
+      width: 180px;
+      height: auto;
+    }
+
+    .gia {
+      color: #d70018;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    .TieuDe {
+      width: 100%;
+      position: relative;
+      font-weight: bold;
+      color: #ffffff;
+      background-color: rgb(14, 0, 120);
+      padding: 5px;
+
+    }
+
+    .TieuDe a {
+      text-decoration: none;
+      color: #ffffff;
+
+    }
+
+
+    .search-box {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      align-items: center;
+      background-color: #ffffff;
+      border-radius: 25px;
+      padding: 3px 5px 3px 20px;
+      width: 600px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    }
+
+
+    .search-box input {
+      flex: 1;
+      height: 40px;
+      border: none;
+      outline: none;
+      font-size: 15px;
+      background: transparent;
+    }
+
+
+    .search-box button {
+      height: 38px;
+      padding: 0 20px;
+      border: none;
+      border-radius: 20px;
+      background-color: #0638c3;
+      color: #ffffff;
+      font-weight: bold;
+      font-size: 14px;
+      cursor: pointer;
+      transition: 0.2s ease;
+    }
+
+    .search-box button:hover {
+      background-color: #000855;
+    }
+
+
+    .slogan {
+      width: 1280px;
+      max-width: 100%;
+      display: block;
+      margin: 10px auto;
+    }
+
+    .DanhMuc table {
+      width: 100%;
+      border-spacing: 5px;
+    }
+
+    .DanhMuc {
+      max-width: 1280px;
+      margin: 0 auto;
+      border-spacing: 20px;
+      padding: 20px;
+      border-radius: 20px;
+    }
+
+    .DanhMuc td {
+
+      text-align: center;
+      padding: 15px;
+      border: 1px solid #eee;
+      border-radius: 22px;
+      background: #ffffff;
+      font-weight: bold;
+
+    }
+
+    .DanhMuc td:hover {
+      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    .DanhMuc td a {
+      display: block;
+      padding: 15px;
+      text-decoration: none;
+    }
+
+    .ThongTinChinhSach {
+
+      background-color: #ffffff;
+      margin-top: 20px;
+      border-spacing: 20px;
+      padding-left: 400px;
+
+    }
+
+    .ThongTinChinhSach th {
+      padding: 30px;
+      text-align: left;
+    }
+
+    .ThongTinChinhSach td {
+      text-align: left;
+      padding-left: 30px;
+      padding-bottom: 10px;
+
+
+    }
+
+    .ThongTinChinhSach td a {
+      text-decoration: none;
+      color: black;
+    }
+
+    .ThongTinChinhSach td a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Tiêu đề -->
+  <div class="TieuDe">
+    <a href="Home.html">
+      <h1>KHÔI TECH STORE</h1>
+    </a>
+    <div class="search-box">
+      <input type="search" id="timKiemInput" placeholder="Bạn cần tìm điện thoại, phụ kiện..." />
+      <button type="button" onclick="timKiemSanPham()"> 🔍 Tìm</button>
+    </div>
+
+  </div>
+  <!-- sologan -->
+  <div class="slogan">
+
+    <a href="#SanPhamHot"><img src="..\images\Bai7\slogan-giamgia2.png" alt="QC giam gia" width="1280"
+        id="SanPhamHot"></a>
+
+  </div>
+
+  <!-- Danh mục -->
+  <div class="DanhMuc">
+    <table>
+      <tr>
+        <td><a href="#SanPhamHot">Sản Phẩm Hot</a> </td>
+        <td><a href="iPhone.html">iPhone</a> </td>
+        <td><a href="Samsung.html">Samsung</a> </td>
+        <td><a href="Vivo.html">Vivo</a> </td>
+        <td><a href="Oppo.html">Oppo</a> </td>
+        <td><a href="Xiaomi.html">Xiaomi</a> </td>
+      </tr>
+
+    </table>
+
+  </div>
+  <div class="khung">
+
+
+    <div class="quangcao">
+
+      <img src="..\images\Bai7\flashsale.png" alt="flash sale" width="400">
+
+
+
+    </div>
+    <!-- Sản phẩm -->
+    <table class="bang-san-pham">
+      <tr>
+        <td>
+          <img src="../images/Bai7/iphone-17-pro-max-cam.png" alt="iPhone 17" />
+          <h3>iPhone 17 Pro Max</h3>
+          <p class="gia"><i style="color: #5b5b5b;"><del>35.490.000đ</del></i><br>Giá chỉ: 33.490.000đ</p>
+        </td>
+        <td>
+          <img src="..\images\Bai7\imgiphone\iphone16prm.png" alt="iPhone 16" />
+          <h3>iPhone 16 Pro Max</h3>
+          <p class="gia"><i style="color: #5b5b5b;"><del>28.490.000đ</del></i><br>Giá chỉ: 26.490.000đ</p>
+        </td>
+        <td>
+          <img src="..\images\Bai7\imgiphone\iphone15prm.png" alt="iPhone 15" />
+          <h3>iPhone 15 Pro Max</h3>
+          <p class="gia"><i style="color: #5b5b5b;"><del>19.490.000đ</del></i><br>Giá chỉ: 18.490.000đ</p>
+        </td>
+        <td>
+          <img src="..\images\Bai7\imgiphone\iphone14prm.png" alt="iPhone 14" />
+          <h3>iPhone 14 Pro Max</h3>
+          <p class="gia"><i style="color: #5b5b5b;"><del>18.490.000đ</del></i><br>Giá chỉ: 16.290.000</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <img src="..\images\Bai7\imgiphone\iphone17.png" alt="iPhone 17" />
+          <h3>iPhone 17</h3>
+          <p class="gia"><i style="color: #5b5b5b;"><del>24.990.000đ</del></i><br>Giá chỉ: 23.390.000đ</p>
+        </td>
+        <td>
+          <img src="..\images\Bai7\imgiphone\iphoneair.png" alt="iPhone air" />
+          <h3>iPhone Air</h3>
+          <p class="gia"><i style="color: #5b5b5b;"><del>22.190.000đ</del></i><br>Giá chỉ: 20.190.000đ</p>
+        </td>
+        <td>
+          <img src="..\images\Bai7\imgoppo\ofx9.png" alt="Oppo Find X9 CH" />
+          <h3>Oppo Find X9 Chính hãng</h3>
+          <p class="gia"><i style="color: #5b5b5b;"><del>19.690.000đ</del></i><br>Giá chỉ: 17.690.000đ</p>
+        </td>
+        <td>
+          <img src="..\images\Bai7\imgoppo\ofx9pro.png" alt="Oppo Find X9 Pro CH" />
+          <h3>Oppo Find X9 Pro Chính hãng</h3>
+          <p class="gia"><i style="color: #5b5b5b;"><del>28.490.000đ</del></i><br>Giá chỉ: 26.490.000đ</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <img src="..\images\Bai7\imgsamsung\sss26ultra.png" alt="Samsung S26 Ultra" />
+          <h3>Samsung S26 Ultra</h3>
+          <p class="gia"><i style="color: #5b5b5b;"><del>28.990.000đ</del></i><br>Giá chỉ: 26.990.000đ</p>
+        </td>
+        <td>
+          <img src="..\images\Bai7\imgsamsung\sss26plus.png" alt="Samsung S26 plus" />
+          <h3>Samsung S26 plus</h3>
+          <p class="gia"><i style="color: #5b5b5b;"><del>23.990.000đ</del></i><br>Giá chỉ: 21.990.000đ</p>
+        </td>
+        <td>
+          <img src="..\images\Bai7\imgxiaomi\xiaomi17ultra.png" alt="Xiaomi 17 Ultra Chính hãng" />
+          <h3>Xiaomi 17 Ultra Chính hãng</h3>
+          <p class="gia"><i style="color: #5b5b5b;"><del>39.490.000đ</del></i><br>Giá chỉ: 37.490.000đ</p>
+        </td>
+        <td>
+          <img src="..\images\Bai7\imgvivo\vvx300pro.png" alt="Vivo x300 Pro Chính hãng" />
+          <h3>Vivo x300 Pro Chính hãng</h3>
+          <p class="gia"><i style="color: #5b5b5b;"><del>24.990.000đ</del></i><br>Giá chỉ: 22.990.000đ</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <img src="..\images\Bai7\imgvivo\vvx300.png" alt="Vivo x300 Chính hãng" />
+          <h3>Vivo x300 Chính hãng</h3>
+          <p class="gia"><i style="color: #5b5b5b;"><del>16.490.000đ</del></i><br>Giá chỉ: 14.490.000đ</p>
+        </td>
+        <td>
+          <img src="..\images\Bai7\imgxiaomi\xiaomi17.png" alt="Xiaomi 17 CH" />
+          <h3>Xiaomi 17 Chính hãng</h3>
+          <p class="gia"><i style="color: #5b5b5b;"><del>18.490.000đ</del></i><br>Giá chỉ: 16.490.000đ</p>
+        </td>
+
+      </tr>
+    </table>
+  </div>
+  <div class="ThongTinChinhSach">
+    <table>
+      <tr>
+        <th>Về chúng tôi </th>
+        <th>Thông tin về chính sách</th>
+        <th>Hỗ trợ khách hàng </th>
+        <th>Tổng đài hỗ trợ</th>
+        <th></th>
+      </tr>
+      <tr>
+        <td><a href="#">Giới thiệu về Khôi Tech Store</a></td>
+        <td><a href="#">Bảo hành mở rộng</a></td>
+        <td><a href="#">Hỗ trợ mua online</a></td>
+        <td><a href="#">Tư vấn mua hàng: 0941054053</a></td>
+      </tr>
+
+      <tr>
+        <td><a href="#">Liên hệ truyền thông</a></td>
+        <td><a href="#">Chính Sách đổi trả</a></td>
+        <td><a href="#">Hỗ trợ trả góp</a></td>
+        <td><a href="#">Khiếu nại - Góp ý: 0941054053</a></td>
+      </tr>
+
+      <tr>
+        <td><a href="#">Hệ thống cửa hàng bán lẻ</a></td>
+        <td><a href="#">Chính sách Bảo mật</a></td>
+        <td><a href="#">Hình thức thanh toán</a></td>
+        <td><a href="#">Trung tâm bảo hành: 0941054053</a></td>
+      </tr>
+
+      <tr>
+        <td></td>
+        <td><a href="#">Chính sách kiểm hàng</a></td>
+        <td><a href="#">Tra cứu bảo hành</a></td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td></td>
+        <td><a href="#">Chính sách bảo hành</a></td>
+        <td><a href="#">Ưu đãi giáo dục</a></td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+</body>
+<script>
+  // 1. Dán URL Web App bạn vừa sao chép ở Bước 1 vào đây
+  const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyE2_PYPEqkgGnrc-J_wO4v8goW_l-iB2qosh0qySBOPwtb9iz5pCB4jRsJahFUHYPG9Q/exec";
+
+  function timKiemSanPham() {
+    const input = document.getElementById("timKiemInput");
+    const keyword = input.value.trim();
+
+    if (!keyword) {
+      alert("Vui lòng nhập từ khóa để tìm kiếm!");
+      return;
+    }
+
+    // Gửi ngầm từ khóa về Google Sheets
+    fetch(GOOGLE_SCRIPT_URL, {
+      method: "POST",
+      mode: "no-cors", // Bỏ qua chặn CORS của trình duyệt
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({ keyword: keyword })
+    }).catch(err => console.log("Lỗi gửi dữ liệu:", err));
+
+    // Thực hiện lọc sản phẩm trên giao diện
+    locSanPham(keyword);
+  }
+
+  // 2. Tùy chọn lọc trực tiếp trên giao diện để người dùng thấy có kết quả
+  function locSanPham(keyword) {
+    const query = keyword.toLowerCase();
+    const items = document.querySelectorAll(".bang-san-pham td");
+
+    items.forEach(item => {
+      const title = item.querySelector("h3") ? item.querySelector("h3").innerText.toLowerCase() : "";
+      if (title.includes(query)) {
+        item.style.display = ""; // Hiện sản phẩm khớp
+      } else {
+        item.style.display = "none"; // Ẩn sản phẩm không khớp
+      }
+    });
+  }
+
+  // 3. Cho phép gõ Enter để tìm kiếm thay vì chỉ bấm nút
+  document.getElementById("timKiemInput").addEventListener("keypress", function (e) {
+    if (e.key === "Enter") {
+      timKiemSanPham();
+    }
+  });
+</script>
+</body>
+
+</html>

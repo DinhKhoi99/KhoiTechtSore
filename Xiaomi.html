@@ -1,0 +1,472 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KHÔI TECH STORE</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        .khung {
+            max-width: 1280px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 20px;
+        }
+
+        .bang-san-pham {
+            width: 100%;
+            border-spacing: 20px;
+            margin-top: 20px;
+        }
+
+        .bang-san-pham td {
+            text-align: center;
+            padding: 15px;
+            border: 1px solid #eee;
+            border-radius: 12px;
+            background: #ffffff;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2)
+        }
+
+        .bang-san-pham td:hover {
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+        }
+
+        .bang-san-pham img {
+            width: 180px;
+            height: auto;
+        }
+
+        .gia {
+            color: #d70018;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .TieuDe {
+            width: 100%;
+            position: relative;
+            font-weight: bold;
+            color: #ffffff;
+            background-color: rgb(14, 0, 120);
+            padding: 5px;
+        }
+
+        .TieuDe a {
+            text-decoration: none;
+            color: #ffffff;
+        }
+
+        .search-box {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            background-color: #ffffff;
+            border-radius: 25px;
+            padding: 3px 5px 3px 20px;
+            width: 600px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+        }
+
+        .search-box input {
+            flex: 1;
+            height: 40px;
+            border: none;
+            outline: none;
+            font-size: 15px;
+            background: transparent;
+        }
+
+        .search-box button {
+            height: 38px;
+            padding: 0 20px;
+            border: none;
+            border-radius: 20px;
+            background-color: #0638c3;
+            color: #ffffff;
+            font-weight: bold;
+            font-size: 14px;
+            cursor: pointer;
+            transition: 0.2s ease;
+        }
+
+        .search-box button:hover {
+            background-color: #000855;
+        }
+
+        .slogan {
+            width: 1280px;
+            max-width: 100%;
+            display: block;
+            margin: 10px auto;
+        }
+
+        .DanhMuc table {
+            width: 100%;
+            border-spacing: 5px;
+        }
+
+        .DanhMuc {
+            max-width: 1280px;
+            margin: 0 auto;
+            border-spacing: 20px;
+            padding: 20px;
+            border-radius: 20px;
+        }
+
+        .DanhMuc td {
+            text-align: center;
+            padding: 15px;
+            border: 1px solid #eee;
+            border-radius: 22px;
+            background: #ffffff;
+            font-weight: bold;
+        }
+
+        .DanhMuc td:hover {
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+        }
+
+        .DanhMuc td a {
+            display: block;
+            padding: 15px;
+            text-decoration: none;
+        }
+
+        .ThongTinChinhSach {
+            background-color: #ffffff;
+            margin-top: 20px;
+            border-spacing: 20px;
+            padding-left: 400px;
+        }
+
+        .ThongTinChinhSach th {
+            padding: 30px;
+            text-align: left;
+        }
+
+        .ThongTinChinhSach td {
+            text-align: left;
+            padding-left: 30px;
+            padding-bottom: 10px;
+        }
+
+        .ThongTinChinhSach td a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .ThongTinChinhSach td a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Tiêu đề -->
+    <div class="TieuDe">
+        <a href="index.html">
+            <h1>KHÔI TECH STORE</h1>
+        </a>
+        <div class="search-box">
+            <input type="search" id="timKiemInput" placeholder="Bạn cần tìm điện thoại, phụ kiện..." />
+            <button type="button" onclick="timKiemSanPham()"> 🔍 Tìm</button>
+        </div>
+    </div>
+
+    <!-- sologan -->
+    <div class="slogan">
+        <a href="#SanPhamHot"><img src="..\images\Bai7\slogan-giamgia2.png" alt="QC giam gia" width="1280"
+        id="SanPhamHot"></a>
+    </div>
+
+    <!-- Danh mục -->
+    <div class="DanhMuc">
+        <table>
+            <tr>
+                <td><a href="index.html">Sản Phẩm Hot</a> </td>
+                <td><a href="iPhone.html">iPhone</a> </td>
+                <td><a href="Samsung.html">Samsung</a> </td>
+                <td><a href="Vivo.html">Vivo</a> </td>
+                <td><a href="Oppo.html">Oppo</a> </td>
+                <td><a href="Xiaomi.html">Xiaomi</a> </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="khung">
+        <div>
+            <h2 id="SanPhamHot">Sản Phẩm nổi bật > Xiaomi</h2>
+        </div>
+
+        <!-- Sản phẩm Xiaomi -->
+        <table class="bang-san-pham">
+            <tr>
+                <td>
+                    <img src="..\images\Bai7\imgxiaomi\redmik90.png" alt="Xiaomi Redmi K90 5G" />
+                    <h3>Xiaomi Redmi K90 5G</h3>
+                    <p class="gia">Giá chỉ: 10.490.000đ</p>
+                </td>
+
+                <td>
+                    <img src="..\images\Bai7\imgxiaomi\redmik90max.png" alt="Xiaomi Redmi K90 Max 5G" />
+                    <h3>Xiaomi Redmi K90 Max 5G</h3>
+                    <p class="gia">Giá chỉ: 12.490.000đ</p>
+                </td>
+
+                <td>
+                    <img src="..\images\Bai7\imgxiaomi\redmik90promax.png" alt="Xiaomi Redmi K90 Pro Max 5G" />
+                    <h3>Xiaomi Redmi K90 Pro Max 5G</h3>
+                    <p class="gia">Giá chỉ: 14.990.000đ</p>
+                </td>
+
+                <td>
+                    <img src="..\images\Bai7\imgxiaomi\redmik90ultra.png" alt="Xiaomi Redmi K90 Ultra 5G" />
+                    <h3>Xiaomi Redmi K90 Ultra 5G</h3>
+                    <p class="gia">Giá chỉ: 16.990.000đ</p>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <img src="..\images\Bai7\imgxiaomi\redminote15.png" alt="Xiaomi Redmi Note 15 4G Chính hãng" />
+                    <h3>Xiaomi Redmi Note 15 4G (Chính hãng)</h3>
+                    <p class="gia">Giá chỉ: 4.490.000đ</p>
+                </td>
+
+                <td>
+                    <img src="..\images\Bai7\imgxiaomi\redminote15.png" alt="Xiaomi Redmi Note 15 5G Chính hãng" />
+                    <h3>Xiaomi Redmi Note 15 5G (Chính hãng)</h3>
+                    <p class="gia">Giá chỉ: 5.490.000đ</p>
+                </td>
+
+                <td>
+                    <img src="..\images\Bai7\imgxiaomi\redminote15pro.png" alt="Xiaomi Redmi Note 15 Pro 5G Chính hãng" />
+                    <h3>Xiaomi Redmi Note 15 Pro 5G (Chính hãng)</h3>
+                    <p class="gia">Giá chỉ: 7.290.000đ</p>
+                </td>
+
+                <td>
+                    <img src="..\images\Bai7\imgxiaomi\redminote15proplus.png" alt="Xiaomi Redmi Note 15 Pro+ 5G Chính hãng" />
+                    <h3>Xiaomi Redmi Note 15 Pro+ 5G (Chính hãng)</h3>
+                    <p class="gia">Giá chỉ: 8.990.000đ</p>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <img src="..\images\Bai7\imgxiaomi\redminote17.png" alt="Xiaomi Redmi Note 17 4G Chính hãng" />
+                    <h3>Xiaomi Redmi Note 17 4G (Chính hãng)</h3>
+                    <p class="gia">Giá chỉ: 4.990.000đ</p>
+                </td>
+
+                <td>
+                    <img src="..\images\Bai7\imgxiaomi\redminote17.png" alt="Xiaomi Redmi Note 17 5G Chính hãng" />
+                    <h3>Xiaomi Redmi Note 17 5G (Chính hãng)</h3>
+                    <p class="gia">Giá chỉ: 6.190.000đ</p>
+                </td>
+
+                <td>
+                    <img src="..\images\Bai7\imgxiaomi\redminote17pro.png" alt="Xiaomi Redmi Note 17 Pro 5G Chính hãng" />
+                    <h3>Xiaomi Redmi Note 17 Pro 5G (Chính hãng)</h3>
+                    <p class="gia">Giá chỉ: 7.990.000đ</p>
+                </td>
+
+                <td>
+                    <img src="..\images\Bai7\imgxiaomi\redminote17promax.png" alt="Xiaomi Redmi Note 17 Pro Max 5G Chính hãng" />
+                    <h3>Xiaomi Redmi Note 17 Pro Max 5G (Chính hãng)</h3>
+                    <p class="gia">Giá chỉ: 9.990.000đ</p>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <img src="..\images\Bai7\imgxiaomi\redmitb4.png" alt="Xiaomi Redmi Turbo 4 5G" />
+                    <h3>Xiaomi Redmi Turbo 4 5G</h3>
+                    <p class="gia">Giá chỉ: 7.490.000đ</p>
+                </td>
+
+                <td>
+                    <img src="..\images\Bai7\imgxiaomi\redmitb4p.png" alt="Xiaomi Redmi Turbo 4 Pro 5G" />
+                    <h3>Xiaomi Redmi Turbo 4 Pro 5G</h3>
+                    <p class="gia">Giá chỉ: 8.990.000đ</p>
+                </td>
+
+                <td>
+                    <img src="..\images\Bai7\imgxiaomi\redmitb5.png" alt="Xiaomi Redmi Turbo 5 5G" />
+                    <h3>Xiaomi Redmi Turbo 5 5G</h3>
+                    <p class="gia">Giá chỉ: 8.490.000đ</p>
+                </td>
+
+                <td>
+                    <img src="..\images\Bai7\imgxiaomi\redmitb5max.png" alt="Xiaomi Redmi Turbo 5 Max 5G" />
+                    <h3>Xiaomi Redmi Turbo 5 Max 5G</h3>
+                    <p class="gia">Giá chỉ: 10.490.000đ</p>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <img src="..\images\Bai7\imgxiaomi\xiaomi 15T.png" alt="Xiaomi 15T 5G" />
+                    <h3>Xiaomi 15T 5G</h3>
+                    <p class="gia">Giá chỉ: 12.990.000đ</p>
+                </td>
+
+                <td>
+                    <img src="..\images\Bai7\imgxiaomi\xiaomi15Tpro.png" alt="Xiaomi 15T Pro 5G" />
+                    <h3>Xiaomi 15T Pro 5G</h3>
+                    <p class="gia">Giá chỉ: 15.490.000đ</p>
+                </td>
+
+                <td>
+                    <img src="..\images\Bai7\imgxiaomi\xiaomi15.png" alt="Xiaomi 15 5G" />
+                    <h3>Xiaomi 15 5G</h3>
+                    <p class="gia">Giá chỉ: 16.990.000đ</p>
+                </td>
+
+                <td>
+                    <img src="..\images\Bai7\imgxiaomi\xiaomi15pro.png" alt="Xiaomi 15 Pro 5G" />
+                    <h3>Xiaomi 15 Pro 5G</h3>
+                    <p class="gia">Giá chỉ: 19.990.000đ</p>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <img src="..\images\Bai7\imgxiaomi\xiaomi15spro.png" alt="Xiaomi 15S Pro 5G" />
+                    <h3>Xiaomi 15S Pro 5G</h3>
+                    <p class="gia">Giá chỉ: 21.490.000đ</p>
+                </td>
+
+                <td>
+                    <img src="..\images\Bai7\imgxiaomi\xiaomi15ultra.png" alt="Xiaomi 15 Ultra 5G" />
+                    <h3>Xiaomi 15 Ultra 5G</h3>
+                    <p class="gia">Giá chỉ: 25.990.000đ</p>
+                </td>
+
+                <td>
+                    <img src="..\images\Bai7\imgxiaomi\xiaomi17.png" alt="Xiaomi 17 5G Nội địa" />
+                    <h3>Xiaomi 17 5G (Nội địa)</h3>
+                    <p class="gia">Giá chỉ: 15.990.000đ</p>
+                </td>
+
+                <td>
+                    <img src="..\images\Bai7\imgxiaomi\xiaomi17.png" alt="Xiaomi 17 5G Chính hãng" />
+                    <h3>Xiaomi 17 5G (Chính hãng)</h3>
+                    <p class="gia"><i style="color: #5b5b5b;"><del>18.490.000đ</del></i><br>Giá chỉ: 16.490.000đ</p>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <img src="..\images\Bai7\imgxiaomi\xiaomi17max.png" alt="Xiaomi 17 Max 5G" />
+                    <h3>Xiaomi 17 Max 5G</h3>
+                    <p class="gia">Giá chỉ: 21.990.000đ</p>
+                </td>
+
+                <td>
+                    <img src="..\images\Bai7\imgxiaomi\xiaomi17pro.png" alt="Xiaomi 17 Pro 5G" />
+                    <h3>Xiaomi 17 Pro 5G</h3>
+                    <p class="gia">Giá chỉ: 23.990.000đ</p>
+                </td>
+
+                <td>
+                    <img src="..\images\Bai7\imgxiaomi\xiaomi17promax.png" alt="Xiaomi 17 Pro Max 5G" />
+                    <h3>Xiaomi 17 Pro Max 5G</h3>
+                    <p class="gia">Giá chỉ: 26.990.000đ</p>
+                </td>
+
+                <td>
+                    <img src="..\images\Bai7\imgxiaomi\xiaomi17T.png" alt="Xiaomi 17T 5G" />
+                    <h3>Xiaomi 17T 5G</h3>
+                    <p class="gia">Giá chỉ: 14.990.000đ</p>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <img src="..\images\Bai7\imgxiaomi\xiaomi17Tpro.png" alt="Xiaomi 17T Pro 5G" />
+                    <h3>Xiaomi 17T Pro 5G</h3>
+                    <p class="gia">Giá chỉ: 17.990.000đ</p>
+                </td>
+
+                <td>
+                    <img src="..\images\Bai7\imgxiaomi\xiaomi17ultra.png" alt="Xiaomi 17 Ultra 5G Nội địa" />
+                    <h3>Xiaomi 17 Ultra 5G (Nội địa)</h3>
+                    <p class="gia">Giá chỉ: 25.990.000đ</p>
+                </td>
+
+                <td>
+                    <img src="..\images\Bai7\imgxiaomi\xiaomi17ultra.png" alt="Xiaomi 17 Ultra 5G Chính hãng" />
+                    <h3>Xiaomi 17 Ultra 5G (Chính hãng)</h3>
+                    <p class="gia"><i style="color: #5b5b5b;"><del>39.490.000đ</del></i><br>Giá chỉ: 37.490.000đ</p>
+                </td>
+
+                
+            </tr>
+        </table>
+    </div>
+
+    <div class="ThongTinChinhSach">
+        <table>
+            <tr>
+                <th>Về chúng tôi </th>
+                <th>Thông tin về chính sách</th>
+                <th>Hỗ trợ khách hàng </th>
+                <th>Tổng đài hỗ trợ</th>
+                <th></th>
+            </tr>
+            <tr>
+                <td><a href="#">Giới thiệu về Khôi Tech Store</a></td>
+                <td><a href="#">Bảo hành mở rộng</a></td>
+                <td><a href="#">Hỗ trợ mua online</a></td>
+                <td><a href="#">Tư vấn mua hàng: 0941054053</a></td>
+            </tr>
+
+            <tr>
+                <td><a href="#">Liên hệ truyền thông</a></td>
+                <td><a href="#">Chính Sách đổi trả</a></td>
+                <td><a href="#">Hỗ trợ trả góp</a></td>
+                <td><a href="#">Khiếu nại - Góp ý: 0941054053</a></td>
+            </tr>
+
+            <tr>
+                <td><a href="#">Hệ thống cửa hàng bán lẻ</a></td>
+                <td><a href="#">Chính sách Bảo mật</a></td>
+                <td><a href="#">Hình thức thanh toán</a></td>
+                <td><a href="#">Trung tâm bảo hành: 0941054053</a></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td><a href="#">Chính sách kiểm hàng</a></td>
+                <td><a href="#">Tra cứu bảo hành</a></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td><a href="#">Chính sách bảo hành</a></td>
+                <td><a href="#">Ưu đãi giáo dục</a></td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>
